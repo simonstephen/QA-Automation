@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CrmLoginData>
+	<logindata>
+		<username>admin</username>
+		<password>SimonStephen</password>
+		<accountName>Simon Stephen</accountName>
+		<website>stephen.com</website>
+		<accountEmail>stephen@gmail.com</accountEmail>
+		<phoneNumber>5263524896</phoneNumber>
+		<billingAddressStreet>America's Main Street</billingAddressStreet>
+		
+		<billingAddressCity>Virgina</billingAddressCity>
+		
+		<billingAddressState>Washington DC</billingAddressState>
+		
+		<billingAddressPostalCode>20001</billingAddressPostalCode>
+		
+		<billingAddressCountry>United States</billingAddressCountry>
+				
+		<shippingAddressStreet>America's Main Street</shippingAddressStreet>
+		
+		<shippingAddressCity>Virgina</shippingAddressCity>
+		
+		<shippingAddressState>Washington DC</shippingAddressState>
+		
+		<shippingAddressPostalCode>20001</shippingAddressPostalCode>
+		
+		<shippingAddressCountry>United States</shippingAddressCountry>
+		
+		<!-- Contacts Details -->
+		
+		<FirstName>Perwala</FirstName>
+		
+		<LastName>Simon Stephen</LastName>
+		
+
+		<Role>Developer</Role>
+		
+		<Email>stephen@gmail.com</Email>
+		
+		<PhoneNumber>5214526352</PhoneNumber>
+		
+		<AddressStreet>America's Main Street</AddressStreet>
+		
+		<AddressCity>Virgina</AddressCity>
+		
+		<AddressState>Washington DC</AddressState>
+	
+		<AddressPostalCode>20001</AddressPostalCode>
+		
+		<AddressCountry>United States</AddressCountry>
+		
+		
+		
+		<InFirstName>Man</InFirstName>
+		<InLastName>Man</InLastName>
+		
+
+		<InRole>Developer</InRole>
+		
+		<InEmail>spiderman@gmail.com</InEmail>
+		<InPhoneNumber>8548546253</InPhoneNumber>
+
+
+		<InpFirstName>Super</InpFirstName>
+		<InpLastName>Man</InpLastName>
+
+		<InpRole>Developer</InpRole>
+		<InpEmail>superman@gmail.com</InpEmail>
+		<InpPhoneNumber>8548f</InpPhoneNumber>
+
+		<InpAddressStreet>America's Main Street</InpAddressStreet>
+		<InpAddressCity>Virgina</InpAddressCity>
+		<InpAddressState>Washington DC</InpAddressState>
+		<InpAddressPostalCode>20001</InpAddressPostalCode>
+		<InpAddressCountry>United States</InpAddressCountry>
+
+	</logindata>
+</CrmLoginData>
