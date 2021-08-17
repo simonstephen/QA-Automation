@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.crm.config.BrowserDriver;
@@ -60,24 +61,27 @@ public class CreateCrmAccount {
 	
 	@AfterClass
 	public void tearDown() {
-		BrowserDriver.getCurrentDriver();
+		//BrowserDriver.getCurrentDriver().quit();
+		extent.flush();
 	}
 	
 	@AfterMethod
 	public void getResult(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			elogger.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + "Test case FAILED due yo below issues", null));
+			elogger.log(Status.FAIL, 
+					MarkupHelper.createLabel(result.getName() + " Test case FAILED due yo below issues ", ExtentColor.RED));
 			elogger.fail(result.getThrowable());
-		}else if (result.getStatus() == ITestResult.SUCCESS) {
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
 				elogger.log(Status.PASS, 
-						MarkupHelper.createLabel(result.g, null))
+						MarkupHelper.createLabel(result.getName() + " Test case PASSED ", ExtentColor.GREEN));
+		} else {
+			elogger.log(Status.SKIP, 
+					MarkupHelper.createLabel(result.getName() + " Test case SKIPPED ", ExtentColor.ORANGE));
+			elogger.skip(result.getThrowable());
+		
 			}
 			
 		}
-		extent.flush();
-		
-	}
-	
 
 	@Test(description = "It creates account with billing address", priority=0)
 	public void insertAccountDetails() throws InterruptedException {
@@ -102,14 +106,14 @@ public class CreateCrmAccount {
 	
 
 	
-//	@Test(description = "It creates account with Account Name, Website, Email and Phone", priority=1)
-//	public void createAccountWithNameWebsiteEmailAndPhoneNumber() throws InterruptedException {
-//
-//	homeService.clickOnAccountsTab();
-//	accountService.clickOnCreateAccount().insertAccountNameWebsiteEmailAndPhoneNumber(
-//			appData.get(0).getInpLastName(), appData.get(0).getWebsite(), appData.get(0).getAccountEmail(),
-//			appData.get(0).getPhoneNumber());
-//			accountService.saveTheAccount();
-//			elogger.pass("Test created with Email and Phone No is Passed");
-//	}
+	//@Test(description = "It creates account with Account Name, Website, Email and Phone", priority=1)
+	public void createAccountWithNameWebsiteEmailAndPhoneNumber() throws InterruptedException {
+
+	homeService.clickOnAccountsTab();
+	accountService.clickOnCreateAccount().insertAccountNameWebsiteEmailAndPhoneNumber(
+			appData.get(0).getInpLastName(), appData.get(0).getWebsite(), appData.get(0).getAccountEmail(),
+			appData.get(0).getPhoneNumber());
+			accountService.saveTheAccount();
+			elogger.pass("Test created with Email and Phone No is Passed");
+	}
 }

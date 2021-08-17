@@ -8,9 +8,9 @@
     <classes>
       <class name="com.crm.tests.CreateCrmAccount">
         <methods>
-          <include name="insertAccountDetails"/>
           <include name="init"/>
-          <include name="finaltearDown"/>
+          <include name="getResult"/>
+          <include name="createAccountWithNameWebsiteEmailAndPhoneNumber"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.crm.tests.CreateCrmAccount -->

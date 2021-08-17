@@ -18,7 +18,7 @@ public class AccountValidators {
 
 	public void validateAccountName(AccountsService accountsService) {
 
-		String insertedAccountName = appData.get(0).getAccountName();
+		String insertedAccountName = "Simon Stephen";
 		String accountName = accountsService.getCreatedAccountName();
 		Assert.assertEquals(accountName, insertedAccountName);
 
