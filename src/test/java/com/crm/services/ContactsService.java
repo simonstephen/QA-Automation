@@ -10,7 +10,7 @@ public class ContactsService {
 	public static ContactsPageContainer contactsPageContainer;
 
 	public ContactsService clickOnCreateContact() {
-		contactsPageContainer.getCreateContact().click();
+		contactsPageContainer.getClickOnCreateContacts().click();
 		return this;
 	}
 
@@ -39,7 +39,7 @@ public class ContactsService {
 	public ContactsService insertContactDetailsWithInvalidPhoneNumber(String salutation, String inpfirstName, String inplastName,
 			String inpaccountSelection, String inprole, String inpemail, String inpphoneNumber, String inpaddressStreet,
 			String inpaddressCity, String inpaddressState, String inpaddressPostalCode,
-			String inpaddressCountry) {
+			String inpaddressCountry) throws InterruptedException {
 
 		contactsPageContainer.getClickOnContacts().click();
 		contactsPageContainer.getClickOnCreateContacts().click();
@@ -58,9 +58,14 @@ public class ContactsService {
 		contactsPageContainer.getAddressPostalCode().sendKeys(inpaddressPostalCode);
 		contactsPageContainer.getAddressCountry().sendKeys(inpaddressCountry);
 		contactsPageContainer.getSave().click();
+		
+		Thread.sleep(6000);
+
 		return this;
 	}
 
+	
+	
 	public ContactsService insertContactDetailsWithoutBillingAddress(String salutation, String inFirstName, String inLastName,
 			String accountSelection, String inEmail, String inRole, String PhoneNumber) {
 

@@ -48,8 +48,11 @@ public class AccountsPageContainer {
 	@FindBy (xpath = "//button[@data-action='save']")
 	public WebElement SavetheAccount;
 	
-	@FindBy (xpath = "//div[@class= 'field' and @data-name='name']")
-	public WebElement getCreatedAccountName;
+	@FindBy (xpath = "//td[@data-name='name']")
+	public WebElement CreatedAccountName;
+	
+	@FindBy (xpath = "//a[@title='Simon Stephen']")
+	public WebElement ClickOnLink;
 	
 	@FindBy (xpath = "//div[@class= 'field' and @data-name='billingAddress']")
 	public WebElement getBillingAddress;
@@ -167,16 +170,29 @@ public class AccountsPageContainer {
 	public void setSavetheAccount(WebElement savetheAccount) {
 		SavetheAccount = savetheAccount;
 	}
-
-	public WebElement getGetCreatedAccountName() {
-		return getCreatedAccountName;
+	
+	
+	public WebElement getCreatedAccountName() {
+		System.out.println("Account Name as been Validated");
+		return CreatedAccountName;
 	}
 
-	public void setCreatedAccountName(WebElement getcreatedAccountName) {
-		this.getCreatedAccountName = getcreatedAccountName;
+	public void setCreatedAccountName(WebElement getCreatedAccountName) {
+		this.CreatedAccountName = getCreatedAccountName;
+	}
+
+
+
+	public WebElement getClickOnLink() {
+		return ClickOnLink;
+	}
+
+	public void setClickOnLink(WebElement clickOnLink) {
+		ClickOnLink = clickOnLink;
 	}
 
 	public WebElement getGetBillingAddress() {
+		System.out.println("Billing Address as been Validated");
 		return getBillingAddress;
 	}
 

@@ -1,6 +1,6 @@
 package com.crm.services;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,7 +10,7 @@ import com.crm.pages.AccountsPageContainer;
 public class AccountsService {
 
 	public static AccountsPageContainer accountsPageContainer;
-	private static Logger Log = Logger.getLogger(AccountsService.class);
+	//private static Logger Log = Logger.getLogger(AccountsService.class);
 
 	public AccountsService clickOnCreateAccount() {
 		accountsPageContainer.getCreateAccount().click();
@@ -44,11 +44,9 @@ public class AccountsService {
 	return this;	
 }
 		public AccountsService saveTheAccount() throws InterruptedException{
-			accountsPageContainer.getSavetheAccount().click();
-//			
-//		
-		Thread.sleep(6000);
-		Log.info("Account created successfully with Billing And Shipping Address");
+			accountsPageContainer.getSavetheAccount().click();	
+		Thread.sleep(14000);
+		//Log.info("Account created successfully with Billing And Shipping Address");
 
 		return this;
 	}
@@ -65,28 +63,36 @@ public class AccountsService {
 //		Log.info("Account created successfully");
 //		return this;
 //	}
+		
+
+
 
 	public String getCreatedAccountName() {
-		accountsPageContainer.getTxtAccountName().getText();
-		return toString();
+		String aname = accountsPageContainer.getCreatedAccountName().getText();
+		System.out.println("Account Name: "+aname);
+		//accountsPageContainer.getCreatedAccountName().click();
+		return aname;
 
 	}
+	
+	public String ClickOnLink() {
+	accountsPageContainer.getClickOnLink().click();
+	return toString();
+
+}
 
 	public String getBillingAdressFromWebPage() {
 		
-		String str = accountsPageContainer.getBillingAddress.getText();
+		String str = accountsPageContainer.getGetBillingAddress().getText();
 		System.out.println(str);
-		return toString();
+		return str;
 	}
 	
-	public static void init() {
-		accountsPageContainer = PageFactory.initElements(BrowserDriver.getCurrentDriver(), AccountsPageContainer.class);
+	
 
-	}
-
-	public AccountsService insertAccountNameWebsiteEmailAndPhoneNumber(String InpLastName, String website, String accountEmail,
+	public AccountsService insertAccountNameWebsiteEmailAndPhoneNumber(String website, String accountEmail,
 			String phoneNumber) {
-		accountsPageContainer.getTxtAccountName().sendKeys(InpLastName);
+		accountsPageContainer.getTxtAccountName().sendKeys("Stephen");
 		accountsPageContainer.getTxtWebsite().sendKeys(website);
 		accountsPageContainer.getTxtEmail().sendKeys(accountEmail);
 		accountsPageContainer.getPhoneProperty().click();
@@ -95,6 +101,10 @@ public class AccountsService {
 		accountsPageContainer.getSavetheAccount().click();
 		return this;
 	}
+	
+	public static void init() {
+		accountsPageContainer = PageFactory.initElements(BrowserDriver.getCurrentDriver(), AccountsPageContainer.class);
 
+	}
 
 }

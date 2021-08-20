@@ -18,7 +18,7 @@ public class AccountValidators {
 
 	public void validateAccountName(AccountsService accountsService) {
 
-		String insertedAccountName = "Simon Stephen";
+		String insertedAccountName = appData.get(0).getAccountName();
 		String accountName = accountsService.getCreatedAccountName();
 		Assert.assertEquals(accountName, insertedAccountName);
 
@@ -35,7 +35,7 @@ public class AccountValidators {
 		String billingAddress = accountsService.getBillingAdressFromWebPage();
 
 		String line[] = billingAddress.split("\\r?\\n");
-		String[] lineIn = line[1].split(" ");
+		String[] lineIn = line[1].split("");
 		String removeComm = lineIn[0].replace(",", "");
 
 		Assert.assertEquals(xmlStreet, line[0]);

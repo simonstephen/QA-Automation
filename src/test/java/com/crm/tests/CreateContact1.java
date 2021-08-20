@@ -13,9 +13,10 @@ import com.crm.data.LoginData;
 import com.crm.services.ContactsService;
 import com.crm.services.HomeService;
 import com.crm.services.LoginService;
+import com.crm.util.BaseListener;
 import com.crm.validators.ContactValidators;
 
-public class CreateContact1 {
+public class CreateContact1 extends BaseListener {
 
 	LoginService loginService = null;
 	HomeService homeService = null;
@@ -38,6 +39,7 @@ public class CreateContact1 {
 		InitializeViews.init();
 		BrowserDriver.getCurrentDriver().get(PropertyLoader.getUrl());
 		loginService.loginToApplication(appData.get(0).getUsername(), appData.get(0).getPassword());
+		test = extent.createTest("Functional Test Cases");
 	}
 
 	@Test(description = "It Creates the Contact with Invalid Phone Number", priority = 0)
@@ -50,8 +52,7 @@ public class CreateContact1 {
 				appData.get(0).getInpPhoneNumber(), appData.get(0).getInpAddressStreet(),
 				appData.get(0).getInpAddressCity(), appData.get(0).getInpAddressState(),
 				appData.get(0).getInpAddressPostalCode(), appData.get(0).getInpAddressCountry());
-		contactValidators.validateContactName(contactsService);
-		Thread.sleep(6000);
+		//contactValidators.validateContactName(contactsService);
 		
 	}
 
