@@ -6,8 +6,7 @@
 <listener class-name="com.crm.util.BaseListener"/>
 </listeners>
 
-<test name="Crm Create Account Test" verbose="2"></test>
-<test name="Crm Create Contact Test" verbose="2">
+<test name="Crm Create Account Test" verbose="2">
 
 <classes>
 <class name= "com.crm.tests.CreateCrmAccount"/>
