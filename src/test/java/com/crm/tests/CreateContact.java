@@ -53,7 +53,7 @@ public class CreateContact extends BaseListener {
 		contactValidators.validateContactName(contactsService);
 	}
 
-	//@Test(description = "It Edits the Contact", priority = 1)
+	@Test(description = "It Edits the Contact", priority = 1)
 	public void editContactDetails() {
 
 		contactsService.editContactDetails(appData.get(0).getSalut(), appData.get(0).getFirstName(),
@@ -64,7 +64,7 @@ public class CreateContact extends BaseListener {
 
 	}
 
-	//@Test(description = "It Deletes the Contact", priority = 2)
+	@Test(description = "It Deletes the Contact", priority = 2)
 	public void DeleteContactDetails() {
 		contactsService.DeleteContactDetails();
 	}

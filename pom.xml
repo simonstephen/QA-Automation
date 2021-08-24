@@ -14,6 +14,8 @@
      <maven.compiler.target>1.8</maven.compiler.target>
 </properties>
 
+
+
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
@@ -59,7 +61,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.4.0</version>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -91,6 +93,7 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.31</version>
 		</dependency>
+		
 
 	</dependencies>
 
@@ -109,6 +112,20 @@
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
+				
+
+        <!-- START Of Plugins -->
+        <!-- MAVEN COMPILER PLUGIN -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.3</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+        <!-- END Of Plugins -->
 
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
