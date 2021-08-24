@@ -107,6 +107,9 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.22.0</version>
 					<configuration>
+					<!-- Force alphabetical order to have a reproducible build -->
+            <runOrder>alphabetical</runOrder>
+            <useSystemClassLoader>false</useSystemClassLoader>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
