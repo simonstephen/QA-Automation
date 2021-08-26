@@ -6,22 +6,23 @@ import com.crm.config.BrowserDriver;
 import com.crm.pages.ContactsPageContainer;
 
 public class ContactsService {
-
+	
 	public static ContactsPageContainer contactsPageContainer;
 
 	public ContactsService clickOnCreateContact() {
-		contactsPageContainer.getClickOnCreateContacts().click();
+		contactsPageContainer.getCreateContact().click();
 		return this;
 	}
 
-	public ContactsService insertContactDetails(String salut, String firstName, String LastName, String accountSelection,
-			String role, String email, String phoneNumber, String addressStreet, String addressCity,
-			String addressState, String addressPostalCode, String addressCountry) {
+
+	public ContactsService insertContactDetails(String firstName, String lastName, String role, String email,
+			String phoneNumber, String addressStreet, String addressCity, String addressState, String addressPostalCode,
+			String addressCountry) {
 
 		contactsPageContainer.getSelectSalutation().click();
 		contactsPageContainer.getValue().click();
 		contactsPageContainer.getFirstName().sendKeys(firstName);
-		contactsPageContainer.getLastName().sendKeys(LastName);
+		contactsPageContainer.getLastName().sendKeys(lastName);
 		contactsPageContainer.getAccountSelection().click();
 		contactsPageContainer.getSelection().click();
 		contactsPageContainer.getRole().sendKeys(role);
@@ -36,11 +37,38 @@ public class ContactsService {
 		return this;
 	}
 
-	public ContactsService insertContactDetailsWithInvalidPhoneNumber(String salutation, String inpfirstName, String inplastName,
-			String inpaccountSelection, String inprole, String inpemail, String inpphoneNumber, String inpaddressStreet,
-			String inpaddressCity, String inpaddressState, String inpaddressPostalCode,
-			String inpaddressCountry) throws InterruptedException {
+	public ContactsService insertContactDetailsWithInvalidPhoneNumber(String infirstName, String inlastName, String inrole,
+			String inemail, String inphoneNumber, String inaddressStreet, String inaddressCity, String inaddressState,
+			String inaddressPostalCode, String inaddressCountry) throws InterruptedException {
 
+		contactsPageContainer.getClickOnContacts().click();
+		contactsPageContainer.getClickOnCreateContacts().click();
+		contactsPageContainer.getSelectSalutation().click();
+		contactsPageContainer.getValue().click();
+		contactsPageContainer.getFirstName().sendKeys(infirstName);
+		contactsPageContainer.getLastName().sendKeys(inlastName);
+		contactsPageContainer.getAccountSelection().click();
+		contactsPageContainer.getSelection().click();
+		contactsPageContainer.getRole().sendKeys(inrole);
+		contactsPageContainer.getEmail().sendKeys(inemail);
+		contactsPageContainer.getPhoneNumber().sendKeys(inphoneNumber);
+		contactsPageContainer.getAddressStreet().sendKeys(inaddressStreet);
+		contactsPageContainer.getAddressCity().sendKeys(inaddressCity);
+		contactsPageContainer.getAddressState().sendKeys(inaddressState);
+		contactsPageContainer.getAddressPostalCode().sendKeys(inaddressPostalCode);
+		contactsPageContainer.getAddressCountry().sendKeys(inaddressCountry);
+		contactsPageContainer.getSave().click();
+		
+		Thread.sleep(12000);
+
+		return this;
+	}
+
+	
+	
+	public ContactsService insertContactDetailsWithoutBillingAddress(String inpfirstName, String inplastName,
+		String inpemail, String inpphoneNumber) {
+		
 		contactsPageContainer.getClickOnContacts().click();
 		contactsPageContainer.getClickOnCreateContacts().click();
 		contactsPageContainer.getSelectSalutation().click();
@@ -49,45 +77,16 @@ public class ContactsService {
 		contactsPageContainer.getLastName().sendKeys(inplastName);
 		contactsPageContainer.getAccountSelection().click();
 		contactsPageContainer.getSelection().click();
-		contactsPageContainer.getRole().sendKeys(inprole);
+		//contactsPageContainer.getRole().sendKeys(inprole);
 		contactsPageContainer.getEmail().sendKeys(inpemail);
 		contactsPageContainer.getPhoneNumber().sendKeys(inpphoneNumber);
-		contactsPageContainer.getAddressStreet().sendKeys(inpaddressStreet);
-		contactsPageContainer.getAddressCity().sendKeys(inpaddressCity);
-		contactsPageContainer.getAddressState().sendKeys(inpaddressState);
-		contactsPageContainer.getAddressPostalCode().sendKeys(inpaddressPostalCode);
-		contactsPageContainer.getAddressCountry().sendKeys(inpaddressCountry);
 		contactsPageContainer.getSave().click();
 		
-		Thread.sleep(6000);
-
-		return this;
-	}
-
-	
-	
-	public ContactsService insertContactDetailsWithoutBillingAddress(String salutation, String inFirstName, String inLastName,
-			String accountSelection, String inEmail, String inRole, String PhoneNumber) {
-
-		contactsPageContainer.getClickOnContacts().click();
-		contactsPageContainer.getClickOnCreateContacts().click();
-		contactsPageContainer.getSelectSalutation().click();
-		contactsPageContainer.getValue().click();
-		contactsPageContainer.getFirstName().sendKeys(inFirstName);
-		contactsPageContainer.getLastName().sendKeys(inLastName);
-		contactsPageContainer.getAccountSelection().click();
-		contactsPageContainer.getSelection().click();
-		contactsPageContainer.getRole().sendKeys(inRole);
-		contactsPageContainer.getEmail().sendKeys(inEmail);
-		contactsPageContainer.getPhoneNumber().sendKeys(PhoneNumber);
-		contactsPageContainer.getSave().click();
 		return this;
 
 	}
 
-	public ContactsService editContactDetails(String salutation, String firstName, String lastName, String accountSelection,
-			String role, String email, String phoneNumber, String addressStreet, String addressCity,
-			String addressState, String addressPostalCode, String addressCountry) {
+	public ContactsService editContactDetails() {
 		contactsPageContainer.getEdit().click();
 		contactsPageContainer.getSelectSalutation().click();
 		contactsPageContainer.getValue().click();
@@ -118,5 +117,6 @@ public class ContactsService {
 		contactsPageContainer.getContactName().click();
 		return this;
 		}
-	
+
+
 	}

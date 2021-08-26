@@ -11,6 +11,7 @@
 <classes>
 <class name= "com.crm.tests.CreateCrmAccount"/>
 <class name= "com.crm.tests.CreateContact"/>
+<class name= "com.crm.tests.CreateContact1"/>
 </classes>
 
 

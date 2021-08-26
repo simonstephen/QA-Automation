@@ -28,7 +28,7 @@ public class ContactValidators {
 	}
 	
 	public void validateContactName(ContactsService contactsService) {
-	String insertedContactName = appData.get(0).getFirstName();
+	String insertedContactName = appData.get(0).getfirstName();
 		
 		ContactsService contactName = contactsService.getContactName();
 	

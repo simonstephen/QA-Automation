@@ -21,10 +21,9 @@ public class LoginData {
 	private String shippingAddressCountry;
 
 	
-	private String salut;
+	
 	private String firstName;
 	private String lastName;
-	private String accountSelection;
 	private String role;
 	private String email;
 	private String phoneNumber;
@@ -34,25 +33,24 @@ public class LoginData {
 	private String addressPostalCode;
 	private String addressCountry;
 	
-	private String inFirstName;
-	private String inLastName;
-	private String inAccountSelection;
+	private String infirstName;
+	private String inlastName;
 	private String inrole;
-	private String inEmail;
-	private String inPhoneNumber;
+	private String inemail;
+	private String inphoneNumber;
+	private String inaddressStreet;
+	private String inaddressCity;
+	private String inaddressState;
+	private String inaddressPostalCode;
+	private String inaddressCountry;
 	
 	
-	private String inpFirstName;
-	private String inpLastName;
-	private String inpAccountSelection;
-	private String inpRole;
-	private String inpEmail;
-	private String inpPhoneNumber;
-	private String inpAddressStreet;
-	private String inpAddressCity;
-	private String inpAddressState;
-	private String inpAddressPostalCode;
-	private String inpAddressCountry;
+	private String inpfirstName;
+	private String inplastName;
+	private String inprole;
+	private String inpemail;
+	private String inpphoneNumber;
+	
 	public String getId() {
 		return id;
 	}
@@ -155,29 +153,17 @@ public class LoginData {
 	public void setShippingAddressCountry(String shippingAddressCountry) {
 		this.shippingAddressCountry = shippingAddressCountry;
 	}
-	public String getSalut() {
-		return salut;
-	}
-	public void setSalut(String salut) {
-		this.salut = salut;
-	}
-	public String getFirstName() {
+	public String getfirstName() {
 		return firstName;
 	}
-	public void setFirstName(String firstName) {
+	public void setfirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public String getLastName() {
+	public String getlastName() {
 		return lastName;
 	}
-	public void setLastName(String lastName) {
+	public void setlastName(String lastName) {
 		this.lastName = lastName;
-	}
-	public String getAccountSelection() {
-		return accountSelection;
-	}
-	public void setAccountSelection(String accountSelection) {
-		this.accountSelection = accountSelection;
 	}
 	public String getRole() {
 		return role;
@@ -227,23 +213,18 @@ public class LoginData {
 	public void setAddressCountry(String addressCountry) {
 		this.addressCountry = addressCountry;
 	}
-	public String getInFirstName() {
-		return inFirstName;
+	
+	public String getInfirstName() {
+		return infirstName;
 	}
-	public void setInFirstName(String inFirstName) {
-		this.inFirstName = inFirstName;
+	public void setInfirstName(String infirstName) {
+		this.infirstName = infirstName;
 	}
-	public String getInLastName() {
-		return inLastName;
+	public String getInlastName() {
+		return inlastName;
 	}
-	public void setInLastName(String inLastName) {
-		this.inLastName = inLastName;
-	}
-	public String getInAccountSelection() {
-		return inAccountSelection;
-	}
-	public void setInAccountSelection(String inAccountSelection) {
-		this.inAccountSelection = inAccountSelection;
+	public void setInlastName(String inlastName) {
+		this.inlastName = inlastName;
 	}
 	public String getInrole() {
 		return inrole;
@@ -251,82 +232,77 @@ public class LoginData {
 	public void setInrole(String inrole) {
 		this.inrole = inrole;
 	}
-	public String getInEmail() {
-		return inEmail;
+	public String getInemail() {
+		return inemail;
 	}
-	public void setInEmail(String inEmail) {
-		this.inEmail = inEmail;
+	public void setInemail(String inemail) {
+		this.inemail = inemail;
 	}
-	public String getInPhoneNumber() {
-		return inPhoneNumber;
+	public String getInphoneNumber() {
+		return inphoneNumber;
 	}
-	public void setInPhoneNumber(String inPhoneNumber) {
-		this.inPhoneNumber = inPhoneNumber;
+	public void setInphoneNumber(String inphoneNumber) {
+		this.inphoneNumber = inphoneNumber;
 	}
-	public String getInpFirstName() {
-		return inpFirstName;
+	public String getInaddressStreet() {
+		return inaddressStreet;
 	}
-	public void setInpFirstName(String inpFirstName) {
-		this.inpFirstName = inpFirstName;
+	public void setInaddressStreet(String inaddressStreet) {
+		this.inaddressStreet = inaddressStreet;
 	}
-	public String getInpLastName() {
-		return inpLastName;
+	public String getInaddressCity() {
+		return inaddressCity;
 	}
-	public void setInpLastName(String inpLastName) {
-		this.inpLastName = inpLastName;
+	public void setInaddressCity(String inaddressCity) {
+		this.inaddressCity = inaddressCity;
 	}
-	public String getInpAccountSelection() {
-		return inpAccountSelection;
+	public String getInaddressState() {
+		return inaddressState;
 	}
-	public void setInpAccountSelection(String inpAccountSelection) {
-		this.inpAccountSelection = inpAccountSelection;
+	public void setInaddressState(String inaddressState) {
+		this.inaddressState = inaddressState;
 	}
-	public String getInpRole() {
-		return inpRole;
+	public String getInaddressPostalCode() {
+		return inaddressPostalCode;
 	}
-	public void setInpRole(String inpRole) {
-		this.inpRole = inpRole;
+	public void setInaddressPostalCode(String inaddressPostalCode) {
+		this.inaddressPostalCode = inaddressPostalCode;
 	}
-	public String getInpEmail() {
-		return inpEmail;
+	public String getInaddressCountry() {
+		return inaddressCountry;
 	}
-	public void setInpEmail(String inpEmail) {
-		this.inpEmail = inpEmail;
+	public void setInaddressCountry(String inaddressCountry) {
+		this.inaddressCountry = inaddressCountry;
 	}
-	public String getInpPhoneNumber() {
-		return inpPhoneNumber;
+	public String getInpfirstName() {
+		return inpfirstName;
 	}
-	public void setInpPhoneNumber(String inpPhoneNumber) {
-		this.inpPhoneNumber = inpPhoneNumber;
+	public void setInpfirstName(String inpfirstName) {
+		this.inpfirstName = inpfirstName;
 	}
-	public String getInpAddressStreet() {
-		return inpAddressStreet;
+	public String getInplastName() {
+		return inplastName;
 	}
-	public void setInpAddressStreet(String inpAddressStreet) {
-		this.inpAddressStreet = inpAddressStreet;
+	public void setInplastName(String inplastName) {
+		this.inplastName = inplastName;
 	}
-	public String getInpAddressCity() {
-		return inpAddressCity;
+	public String getInprole() {
+		return inprole;
 	}
-	public void setInpAddressCity(String inpAddressCity) {
-		this.inpAddressCity = inpAddressCity;
+	public void setInprole(String inprole) {
+		this.inprole = inprole;
 	}
-	public String getInpAddressState() {
-		return inpAddressState;
+	public String getInpemail() {
+		return inpemail;
 	}
-	public void setInpAddressState(String inpAddressState) {
-		this.inpAddressState = inpAddressState;
+	public void setInpemail(String inpemail) {
+		this.inpemail = inpemail;
 	}
-	public String getInpAddressPostalCode() {
-		return inpAddressPostalCode;
+	public String getInpphoneNumber() {
+		return inpphoneNumber;
 	}
-	public void setInpAddressPostalCode(String inpAddressPostalCode) {
-		this.inpAddressPostalCode = inpAddressPostalCode;
+	public void setInpphoneNumber(String inpphoneNumber) {
+		this.inpphoneNumber = inpphoneNumber;
 	}
-	public String getInpAddressCountry() {
-		return inpAddressCountry;
-	}
-	public void setInpAddressCountry(String inpAddressCountry) {
-		this.inpAddressCountry = inpAddressCountry;
-	}
+	
 }

@@ -99,20 +99,21 @@ public class ContactsPageContainer {
 		Value = value;
 	}
 
+
 	public WebElement getFirstName() {
 		return FirstName;
 	}
 
-	public void setFirstName(WebElement firstName) {
-		FirstName = firstName;
+	public void setFirstName(WebElement FirstName) {
+		this.FirstName = FirstName;
 	}
 
 	public WebElement getLastName() {
 		return LastName;
 	}
 
-	public void setLastName(WebElement lastName) {
-		LastName = lastName;
+	public void setTxtLastName(WebElement LastName) {
+		this.LastName = LastName;
 	}
 
 	public WebElement getAccountSelection() {

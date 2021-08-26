@@ -37,7 +37,7 @@ public class CreateContact extends BaseListener {
 		appData = crmLoginData.getcrmlogindata();
 		InitializeViews.init();
 		BrowserDriver.getCurrentDriver().get(PropertyLoader.getUrl());
-		loginService.loginToApplication(appData.get(0).getUsername(), appData.get(0).getPassword());
+	//	loginService.loginToApplication(appData.get(0).getUsername(), appData.get(0).getPassword());
 		test = extent.createTest("Functional Test Cases");
 	}
 
@@ -45,27 +45,21 @@ public class CreateContact extends BaseListener {
 	public void insertContactDetails() {
 
 		homeService.clickOnContactsTab();
-		contactsService.clickOnCreateContact().insertContactDetails(appData.get(0).getSalut(), appData.get(0).getFirstName(),
-				appData.get(0).getLastName(), appData.get(0).getAccountSelection(), appData.get(0).getRole(),
-				appData.get(0).getEmail(), appData.get(0).getPhoneNumber(), appData.get(0).getAddressStreet(),
-				appData.get(0).getAddressCity(), appData.get(0).getAddressState(),
+		contactsService.clickOnCreateContact().insertContactDetails(appData.get(0).getfirstName(), appData.get(0).getlastName(), appData.get(0).getRole(),
+				appData.get(0).getEmail(),appData.get(0).getPhoneNumber(), appData.get(0).getAddressStreet(), appData.get(0).getAddressCity(), appData.get(0).getAddressState(),
 				appData.get(0).getAddressPostalCode(), appData.get(0).getAddressCountry());
-		contactValidators.validateContactName(contactsService);
+		//contactValidators.validateContactName(contactsService);
 	}
 
 	@Test(description = "It Edits the Contact", priority = 1)
 	public void editContactDetails() {
 
-		contactsService.editContactDetails(appData.get(0).getSalut(), appData.get(0).getFirstName(),
-				appData.get(0).getLastName(), appData.get(0).getAccountSelection(), appData.get(0).getRole(),
-				appData.get(0).getEmail(), appData.get(0).getPhoneNumber(), appData.get(0).getAddressStreet(),
-				appData.get(0).getAddressCity(), appData.get(0).getAddressState(),
-				appData.get(0).getAddressPostalCode(), appData.get(0).getAddressCountry());
+		contactsService.editContactDetails();
 
 	}
 
-	@Test(description = "It Deletes the Contact", priority = 2)
-	public void DeleteContactDetails() {
-		contactsService.DeleteContactDetails();
-	}
+//	@Test(description = "It Deletes the Contact", priority = 2)
+//	public void DeleteContactDetails() {
+//		contactsService.DeleteContactDetails();
+//	}
 }

@@ -29,51 +29,62 @@
 		
 		<!-- Contacts Details -->
 		
-		<FirstName>Perwala</FirstName>
+		<firstName>Perwala</firstName>
 		
-		<LastName>Simon Stephen</LastName>
+		<lastName>Simon Stephen</lastName>
 		
 
-		<Role>Developer</Role>
+		<role>Developer</role>
 		
-		<Email>stephen@gmail.com</Email>
+		<email>stephen@gmail.com</email>
 		
-		<PhoneNumber>5214526352</PhoneNumber>
+		<phoneNumber>5214526352</phoneNumber>
 		
-		<AddressStreet>America's Main Street</AddressStreet>
+		<addressStreet>America's Main Street</addressStreet>
 		
-		<AddressCity>Virgina</AddressCity>
+		<addressCity>Virgina</addressCity>
 		
-		<AddressState>Washington DC</AddressState>
+		<addressState>Washington DC</addressState>
 	
-		<AddressPostalCode>20001</AddressPostalCode>
+		<addressPostalCode>20001</addressPostalCode>
 		
-		<AddressCountry>United States</AddressCountry>
+		<addressCountry>United States</addressCountry>
 		
+		<!-- Invalid Phone Number in Contacts Details -->
 		
+		<infirstName>Super</infirstName>
 		
-		<InFirstName>Man</InFirstName>
-		<InLastName>Man</InLastName>
+		<inlastName>Man</inlastName>
 		
 
-		<InRole>Developer</InRole>
+		<inrole>Developer</inrole>
 		
-		<InEmail>spiderman@gmail.com</InEmail>
-		<InPhoneNumber>8548546253</InPhoneNumber>
-
-
-		<InpFirstName>Super</InpFirstName>
-		<InpLastName>Man</InpLastName>
-
-		<InpRole>Developer</InpRole>
-		<InpEmail>superman@gmail.com</InpEmail>
-		<InpPhoneNumber>8548f</InpPhoneNumber>
-
-		<InpAddressStreet>America's Main Street</InpAddressStreet>
-		<InpAddressCity>Virgina</InpAddressCity>
-		<InpAddressState>Washington DC</InpAddressState>
-		<InpAddressPostalCode>20001</InpAddressPostalCode>
-		<InpAddressCountry>United States</InpAddressCountry>
-
+		<inemail>superman@gmail.com</inemail>
+		
+		<inphoneNumber>52142</inphoneNumber>
+		
+		<inaddressStreet>America's Main Street</inaddressStreet>
+		
+		<inaddressCity>Virgina</inaddressCity>
+		
+		<inaddressState>Washington DC</inaddressState>
+	
+		<inaddressPostalCode>20001</inaddressPostalCode>
+		
+		<inaddressCountry>United States</inaddressCountry>
+		
+		<!-- Without Billing Address in Contacts Details -->
+		
+		<inpfirstName>Spider</inpfirstName>
+		
+		<inplastName>Man</inplastName>
+	
+		<inprole>Developer</inprole>
+		
+		<inpemail>spiderman@gmail.com</inpemail>
+		
+		<inpphoneNumber>5214225632</inpphoneNumber>
+		
+		
 	</logindata>
 </CrmLoginData>
